@@ -2,12 +2,17 @@
 Library        OperatingSystem
 
 *** Variables ***
-${PATH}        ${CURDIR}/example.txt
-${COPY}        ${CURDIR}/file.txt
+${FILENUMBER}         2048
+${FILEDESTINATION}    ${CURDIR}/files
 
 *** Test Cases ***
-Example
-    Create File        ${PATH}    Some text
-		Create File        ${COPY}    
-		File Should Exist  ${PATH}
-		Copy File          ${PATH}    ~/file.txt
+Create directory for dummy files
+    Create Directory          ${CURDIR}/files
+		Directory Should Exist    ${CURDIR}/files
+
+Create dummy files
+    [Documentation]    Creates all the files the script should rename
+		FOR    ${index}    IN RANGE    20
+				Create File    ${FILEDESTINATION}/${FILENUMBER}.txt
+				${FILENUMBER}  Evaluate    ${FILENUMBER} * 2
+		END

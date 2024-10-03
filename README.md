@@ -9,6 +9,6 @@ Before doing any real-life renaming, it is important to test that the script wor
 - Python script to keep my personal files in order
 - Tests: Robot Framework creates dummy folders with dummy files with random names, runs the script and checks that files are renamed accordingly
 
-## Plan
+## Todo (bugs)
 
-- Create tests first, then the script
+- Script ignores files that are created at exactly the same time, turns them into one or something

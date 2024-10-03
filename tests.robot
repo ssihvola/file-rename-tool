@@ -11,8 +11,10 @@ Create directory for dummy files
 		Directory Should Exist    ${CURDIR}/files
 
 Create dummy files
-    [Documentation]    Creates all the files the script should rename
+    [Documentation]    The script generates all the files that need to be renamed. 
+		...    These files are named in descending order, as they will be renamed 
+		...    based on the date and time they were created.
 		FOR    ${index}    IN RANGE    20
 				Create File    ${FILEDESTINATION}/${FILENUMBER}.txt
-				${FILENUMBER}  Evaluate    ${FILENUMBER} * 2
+				${FILENUMBER}  Evaluate    ${FILENUMBER} - 20
 		END

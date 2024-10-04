@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.3 on linux)" generated="2024-10-04T09:37:00.891705" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/aa-massa/Desktop/file-rename-tool/tests.robot">
+<test id="s1-t1" name="Create directory for dummy files" line="12">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.930810" level="INFO" html="true">Created directory '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files"&gt;/home/aa-massa/Desktop/file-rename-tool/files&lt;/a&gt;'.</msg>
+<arg>/home/aa-massa/Desktop/file-rename-tool/files</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.930459" elapsed="0.000515"/>
+</kw>
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.931475" level="INFO" html="true">Directory '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files"&gt;/home/aa-massa/Desktop/file-rename-tool/files&lt;/a&gt;' exists.</msg>
+<arg>/home/aa-massa/Desktop/file-rename-tool/files</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.931274" elapsed="0.000302"/>
+</kw>
+<status status="PASS" start="2024-10-04T09:37:00.929592" elapsed="0.002252"/>
+</test>
+<test id="s1-t2" name="Create dummy files" line="16">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.934106" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/2048.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/2048.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.933754" elapsed="0.000446"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.934662" level="INFO">${FILENUMBER} = 8192</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.934363" elapsed="0.000327"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-10-04T09:37:00.933629" elapsed="0.001100"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.935194" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/8192.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/8192.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.934924" elapsed="0.000353"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.935698" level="INFO">${FILENUMBER} = 32768</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.935428" elapsed="0.000295"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-10-04T09:37:00.934844" elapsed="0.000918"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.936391" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/32768.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/32768.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.936025" elapsed="0.000466"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.937119" level="INFO">${FILENUMBER} = 131072</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.936703" elapsed="0.000459"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-10-04T09:37:00.935916" elapsed="0.001315"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.937913" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/131072.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/131072.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.937536" elapsed="0.000464"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.938451" level="INFO">${FILENUMBER} = 524288</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.938162" elapsed="0.000323"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-10-04T09:37:00.937392" elapsed="0.001153"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.938978" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/524288.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/524288.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.938726" elapsed="0.000333"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.939504" level="INFO">${FILENUMBER} = 2097152</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.939216" elapsed="0.000341"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-10-04T09:37:00.938648" elapsed="0.000976"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.940170" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/2097152.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/2097152.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.939909" elapsed="0.000339"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.940593" level="INFO">${FILENUMBER} = 8388608</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.940360" elapsed="0.000270"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2024-10-04T09:37:00.939818" elapsed="0.000852"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.941114" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/8388608.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/8388608.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.940851" elapsed="0.000344"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.941615" level="INFO">${FILENUMBER} = 33554432</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.941354" elapsed="0.000287"/>
+</kw>
+<var name="${index}">6</var>
+<status status="PASS" start="2024-10-04T09:37:00.940774" elapsed="0.000906"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.942123" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/33554432.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/33554432.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.941859" elapsed="0.000411"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.942704" level="INFO">${FILENUMBER} = 134217728</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.942436" elapsed="0.000297"/>
+</kw>
+<var name="${index}">7</var>
+<status status="PASS" start="2024-10-04T09:37:00.941784" elapsed="0.000989"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.943225" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/134217728.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/134217728.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.942963" elapsed="0.000344"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.943688" level="INFO">${FILENUMBER} = 536870912</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.943459" elapsed="0.000254"/>
+</kw>
+<var name="${index}">8</var>
+<status status="PASS" start="2024-10-04T09:37:00.942877" elapsed="0.000880"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.944181" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/536870912.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/536870912.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.943928" elapsed="0.000333"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.944662" level="INFO">${FILENUMBER} = 2147483648</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.944406" elapsed="0.000282"/>
+</kw>
+<var name="${index}">9</var>
+<status status="PASS" start="2024-10-04T09:37:00.943854" elapsed="0.000873"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.945154" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/2147483648.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/2147483648.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.944904" elapsed="0.000328"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.945662" level="INFO">${FILENUMBER} = 8589934592</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.945391" elapsed="0.000298"/>
+</kw>
+<var name="${index}">10</var>
+<status status="PASS" start="2024-10-04T09:37:00.944823" elapsed="0.000905"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.946144" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/8589934592.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/8589934592.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.945906" elapsed="0.000314"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.946557" level="INFO">${FILENUMBER} = 34359738368</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.946327" elapsed="0.000268"/>
+</kw>
+<var name="${index}">11</var>
+<status status="PASS" start="2024-10-04T09:37:00.945832" elapsed="0.000821"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.947218" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/34359738368.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/34359738368.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.946897" elapsed="0.000400"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.947785" level="INFO">${FILENUMBER} = 137438953472</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.947474" elapsed="0.000357"/>
+</kw>
+<var name="${index}">12</var>
+<status status="PASS" start="2024-10-04T09:37:00.946794" elapsed="0.001098"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.948591" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/137438953472.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/137438953472.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.948176" elapsed="0.000519"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.949117" level="INFO">${FILENUMBER} = 549755813888</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.948843" elapsed="0.000311"/>
+</kw>
+<var name="${index}">13</var>
+<status status="PASS" start="2024-10-04T09:37:00.948047" elapsed="0.001152"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.949944" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/549755813888.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/549755813888.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.949414" elapsed="0.000620"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.950418" level="INFO">${FILENUMBER} = 2199023255552</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.950176" elapsed="0.000269"/>
+</kw>
+<var name="${index}">14</var>
+<status status="PASS" start="2024-10-04T09:37:00.949312" elapsed="0.001173"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.951040" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/2199023255552.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/2199023255552.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.950708" elapsed="0.000426"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.951603" level="INFO">${FILENUMBER} = 8796093022208</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.951318" elapsed="0.000310"/>
+</kw>
+<var name="${index}">15</var>
+<status status="PASS" start="2024-10-04T09:37:00.950611" elapsed="0.001113"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.952240" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/8796093022208.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/8796093022208.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.951965" elapsed="0.000365"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.952734" level="INFO">${FILENUMBER} = 35184372088832</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.952480" elapsed="0.000280"/>
+</kw>
+<var name="${index}">16</var>
+<status status="PASS" start="2024-10-04T09:37:00.951874" elapsed="0.000926"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.953238" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/35184372088832.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/35184372088832.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.952979" elapsed="0.000341"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.953867" level="INFO">${FILENUMBER} = 140737488355328</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.953482" elapsed="0.000436"/>
+</kw>
+<var name="${index}">17</var>
+<status status="PASS" start="2024-10-04T09:37:00.952901" elapsed="0.001081"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.954709" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/140737488355328.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/140737488355328.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.954270" elapsed="0.000535"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.955411" level="INFO">${FILENUMBER} = 562949953421312</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.955008" elapsed="0.000444"/>
+</kw>
+<var name="${index}">18</var>
+<status status="PASS" start="2024-10-04T09:37:00.954141" elapsed="0.001406"/>
+</iter>
+<iter>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.956045" level="INFO" html="true">Created file '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files/562949953421312.txt"&gt;/home/aa-massa/Desktop/file-rename-tool/files/562949953421312.txt&lt;/a&gt;'.</msg>
+<arg>${FILEDESTINATION}/${FILENUMBER}.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.955759" elapsed="0.000343"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.956467" level="INFO">${FILENUMBER} = 2251799813685248</msg>
+<var>${FILENUMBER}</var>
+<arg>${FILENUMBER} * 4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.956223" elapsed="0.000280"/>
+</kw>
+<var name="${index}">19</var>
+<status status="PASS" start="2024-10-04T09:37:00.955667" elapsed="0.000894"/>
+</iter>
+<var>${index}</var>
+<value>20</value>
+<status status="PASS" start="2024-10-04T09:37:00.932973" elapsed="0.023636"/>
+</for>
+<doc>The script generates all the files that need to be renamed
+with random numbers as titles</doc>
+<status status="PASS" start="2024-10-04T09:37:00.932247" elapsed="0.024560"/>
+</test>
+<test id="s1-t3" name="Check that there are correct number of files" line="24">
+<kw name="Count Files In Directory" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.957975" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files"&gt;/home/aa-massa/Desktop/file-rename-tool/files&lt;/a&gt;'.</msg>
+<msg time="2024-10-04T09:37:00.958204" level="INFO">20 files.</msg>
+<msg time="2024-10-04T09:37:00.958288" level="INFO">${files} = 20</msg>
+<var>${files}</var>
+<arg>${FILEDESTINATION}</arg>
+<doc>Wrapper for `Count Items In Directory` returning only file count.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.957797" elapsed="0.000514"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.958698" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${files}</arg>
+<arg>${EXPECTED_FILE_COUNT}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.958525" elapsed="0.000246"/>
+</kw>
+<status status="PASS" start="2024-10-04T09:37:00.957278" elapsed="0.001674"/>
+</test>
+<test id="s1-t4" name="Run Python script" line="28">
+<kw name="Run Process" owner="Process">
+<msg time="2024-10-04T09:37:00.959806" level="INFO">Starting process:
+python /home/aa-massa/Desktop/file-rename-tool/app.py</msg>
+<msg time="2024-10-04T09:37:00.962797" level="INFO">Waiting for process to complete.</msg>
+<msg time="2024-10-04T09:37:00.980321" level="INFO">Process completed.</msg>
+<msg time="2024-10-04T09:37:00.980725" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>python</arg>
+<arg>${PYTHON_SCRIPT}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.959617" elapsed="0.021158"/>
+</kw>
+<status status="PASS" start="2024-10-04T09:37:00.959243" elapsed="0.021946"/>
+</test>
+<test id="s1-t5" name="Check that there are correct number of files after running the script" line="31">
+<kw name="Count Files In Directory" owner="OperatingSystem">
+<msg time="2024-10-04T09:37:00.982596" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///home/aa-massa/Desktop/file-rename-tool/files"&gt;/home/aa-massa/Desktop/file-rename-tool/files&lt;/a&gt;'.</msg>
+<msg time="2024-10-04T09:37:00.982832" level="INFO">20 files.</msg>
+<msg time="2024-10-04T09:37:00.982912" level="INFO">${files} = 20</msg>
+<var>${files}</var>
+<arg>${FILEDESTINATION}</arg>
+<doc>Wrapper for `Count Items In Directory` returning only file count.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.982272" elapsed="0.000663"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-10-04T09:37:00.983323" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${files}</arg>
+<arg>${EXPECTED_FILE_COUNT}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-10-04T09:37:00.983106" elapsed="0.000301"/>
+</kw>
+<status status="PASS" start="2024-10-04T09:37:00.981608" elapsed="0.001971"/>
+</test>
+<status status="PASS" start="2024-10-04T09:37:00.892774" elapsed="0.091417"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

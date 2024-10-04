@@ -4,6 +4,14 @@ This is a script I created for my personal use. I needed a way to rename my vide
 
 Before doing any real-life renaming, it is important to test that the script works as expected. I chose Robot Framework as my testing tool, because of it's OperatingSystem library.
 
+## Usage
+
+Install Robot Framework & activate the virtual environment
+
+``python -m venv .venv
+source .venv/bin/activate
+pip install robotframework``
+
 ## Specs
 
 - Python script to keep my personal files in order
